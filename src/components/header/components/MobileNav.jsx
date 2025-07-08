@@ -9,6 +9,10 @@ export default function MobileNav() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const theme = useTheme();
 
+  const iOS =
+    typeof navigator !== 'undefined' &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,7 +39,12 @@ export default function MobileNav() {
         >
           <MenuIcon />
         </IconButton>
-        <Drawer open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}>
+        <Drawer
+          disableBackdropTransition={!iOS}
+          disableDiscovery={iOS}
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
+        >
           <Box
             sx={{
               display: { xs: 'block', md: 'none' },

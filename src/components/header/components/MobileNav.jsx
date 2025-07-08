@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from '@mui/material/Link';
-import { Drawer, List, ListItem, useTheme } from '@mui/material';
+import { SwipeableDrawer, List, ListItem, useTheme } from '@mui/material';
 
 export default function MobileNav() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -39,7 +39,7 @@ export default function MobileNav() {
         >
           <MenuIcon />
         </IconButton>
-        <Drawer
+        <SwipeableDrawer
           disableBackdropTransition={!iOS}
           disableDiscovery={iOS}
           open={Boolean(anchorElNav)}
@@ -76,7 +76,7 @@ export default function MobileNav() {
               </ListItem>
             </List>
           </Box>
-        </Drawer>
+        </SwipeableDrawer>
       </Box>
     </>
   );

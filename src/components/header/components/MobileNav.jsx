@@ -147,12 +147,12 @@ export default function MobileNav() {
                 </Link>
               </ListItem>
               <ListItem>
-                <Link href="/hotels" underline="none" color="textPrimary">
+                <Link href="hotels" underline="none" color="textPrimary">
                   Hotels
                 </Link>
               </ListItem>
               <ListItem>
-                <Link href="/about" underline="none" color="textPrimary">
+                <Link href="about" underline="none" color="textPrimary">
                   About
                 </Link>
               </ListItem>

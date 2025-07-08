@@ -86,7 +86,8 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Link from '@mui/material/Link';
+import Link from 'react-router';
+import { Link as MuiLink } from '@mui/material/Link';
 import { SwipeableDrawer, List, ListItem, useTheme } from '@mui/material';
 
 export default function MobileNav() {
@@ -142,19 +143,34 @@ export default function MobileNav() {
           >
             <List>
               <ListItem>
-                <Link href="/" underline="none" color="textPrimary">
+                <MuiLink
+                  component={Link}
+                  href="/"
+                  underline="none"
+                  color="textPrimary"
+                >
                   Home
-                </Link>
+                </MuiLink>
               </ListItem>
               <ListItem>
-                <Link href="hotels" underline="none" color="textPrimary">
+                <MuiLink
+                  component={Link}
+                  href="hotels"
+                  underline="none"
+                  color="textPrimary"
+                >
                   Hotels
-                </Link>
+                </MuiLink>
               </ListItem>
               <ListItem>
-                <Link href="about" underline="none" color="textPrimary">
+                <MuiLink
+                  component={Link}
+                  href="about"
+                  underline="none"
+                  color="textPrimary"
+                >
                   About
-                </Link>
+                </MuiLink>
               </ListItem>
             </List>
           </Box>

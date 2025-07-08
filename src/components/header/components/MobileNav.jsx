@@ -145,7 +145,7 @@ export default function MobileNav() {
               <ListItem>
                 <MuiLink
                   component={Link}
-                  href="/"
+                  to="/"
                   underline="none"
                   color="textPrimary"
                 >
@@ -155,7 +155,7 @@ export default function MobileNav() {
               <ListItem>
                 <MuiLink
                   component={Link}
-                  href="hotels"
+                  to="hotels"
                   underline="none"
                   color="textPrimary"
                 >
@@ -165,7 +165,7 @@ export default function MobileNav() {
               <ListItem>
                 <MuiLink
                   component={Link}
-                  href="about"
+                  to="about"
                   underline="none"
                   color="textPrimary"
                 >

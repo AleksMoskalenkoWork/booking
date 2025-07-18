@@ -2,9 +2,14 @@ import { styled } from '@mui/material/styles';
 import { useColorScheme } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import { useEffect } from 'react';
 
 function ThemeToggler() {
   const { mode, setMode } = useColorScheme();
+
+  useEffect(() => {
+    setMode('light');
+  }, []);
 
   if (!mode || !setMode) {
     return null;
